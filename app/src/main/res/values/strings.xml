@@ -31,4 +31,27 @@
     <string name="criterion_uppercase">Uma letra maiúscula</string>
     <string name="criterion_digit">Um número</string>
     <string name="criterion_special">Um símbolo (!@#$…)</string>
+    <!-- Tela de autenticação -->
+    <string name="auth_title_login">Que bom te ver de novo</string>
+    <string name="auth_subtitle_login">Entre com seu e-mail e senha.</string>
+    <string name="auth_title_register">Crie sua conta</string>
+    <string name="auth_subtitle_register">Só precisamos do seu nome, e-mail e uma senha.</string>
+    <string name="mode_login">Entrar</string>
+    <string name="mode_register">Criar conta</string>
+    <string name="field_name">Nome</string>
+    <string name="field_email">E-mail</string>
+    <string name="field_password">Senha</string>
+    <string name="field_confirm_password">Confirmar senha</string>
+    <string name="hint_password_register">Mínimo de 6 caracteres</string>
+    <string name="action_login">Entrar</string>
+    <string name="action_register">Criar conta</string>
+    <string name="action_forgot_password">Esqueci minha senha</string>
+    <string name="cd_show_password">Mostrar senha</string>
+    <string name="cd_hide_password">Ocultar senha</string>
+    <string name="loading">Carregando</string>
+
+    <!-- Tela provisória da etapa 3 (substituída pelo Dashboard na etapa 4) -->
+    <string name="temp_greeting">Olá, %1$s!</string>
+    <string name="temp_logged_as">Conectado como %1$s</string>
+    <string name="action_sign_out">Sair</string>
 </resources>
