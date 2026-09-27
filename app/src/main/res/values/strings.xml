@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">AuthApp</string>
+
+    <!-- Validação de campos -->
+    <string name="error_required">Preencha este campo.</string>
+    <string name="error_invalid_email">Digite um e-mail válido, como nome@exemplo.com.</string>
+    <string name="error_password_too_short">A senha precisa ter pelo menos 6 caracteres.</string>
+    <string name="error_passwords_dont_match">As senhas não coincidem.</string>
+    <string name="error_name_too_short">O nome precisa ter pelo menos 2 caracteres.</string>
+    <string name="error_name_too_long">O nome pode ter no máximo 40 caracteres.</string>
+
+    <!-- Erros do Firebase -->
+    <string name="auth_error_email_in_use">Este e-mail já tem uma conta. Entre ou recupere a senha.</string>
+    <string name="auth_error_weak_password">Senha fraca. Use pelo menos 6 caracteres, misturando letras e números.</string>
+    <string name="auth_error_invalid_email">O formato do e-mail é inválido.</string>
+    <string name="auth_error_invalid_credentials">E-mail ou senha incorretos.</string>
+    <string name="auth_error_user_disabled">Esta conta foi desativada.</string>
+    <string name="auth_error_too_many_requests">Muitas tentativas seguidas. Aguarde alguns minutos e tente de novo.</string>
+    <string name="auth_error_network">Sem conexão com a internet. Verifique a rede e tente de novo.</string>
+    <string name="auth_error_operation_not_allowed">Login por e-mail e senha não está ativado no Firebase Console.</string>
+    <string name="auth_error_unknown">Não foi possível concluir. Tente novamente.</string>
+
+    <!-- Força da senha -->
+    <string name="strength_empty"></string>
+    <string name="strength_weak">Fraca</string>
+    <string name="strength_fair">Média</string>
+    <string name="strength_good">Boa</string>
+    <string name="strength_strong">Forte</string>
+    <string name="criterion_min_length">8 ou mais caracteres</string>
+    <string name="criterion_lowercase">Uma letra minúscula</string>
+    <string name="criterion_uppercase">Uma letra maiúscula</string>
+    <string name="criterion_digit">Um número</string>
+    <string name="criterion_special">Um símbolo (!@#$…)</string>
 </resources>
