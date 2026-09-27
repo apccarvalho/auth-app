@@ -18,6 +18,7 @@
     <string name="auth_error_too_many_requests">Muitas tentativas seguidas. Aguarde alguns minutos e tente de novo.</string>
     <string name="auth_error_network">Sem conexão com a internet. Verifique a rede e tente de novo.</string>
     <string name="auth_error_operation_not_allowed">Login por e-mail e senha não está ativado no Firebase Console.</string>
+    <string name="auth_error_configuration">O app não conseguiu acessar o serviço de login por um problema de configuração. Tente mais tarde.</string>
     <string name="auth_error_unknown">Não foi possível concluir. Tente novamente.</string>
 
     <!-- Força da senha -->
@@ -50,8 +51,15 @@
     <string name="cd_hide_password">Ocultar senha</string>
     <string name="loading">Carregando</string>
 
-    <!-- Tela provisória da etapa 3 (substituída pelo Dashboard na etapa 4) -->
-    <string name="temp_greeting">Olá, %1$s!</string>
-    <string name="temp_logged_as">Conectado como %1$s</string>
-    <string name="action_sign_out">Sair</string>
+    <!-- Dashboard -->
+    <string name="dashboard_greeting">Olá, %1$s!</string>
+    <string name="dashboard_subtitle">Que bom ter você por aqui.</string>
+    <string name="dashboard_account_title">Sua conta</string>
+    <string name="dashboard_email_label">E-mail</string>
+    <string name="dashboard_created_label">Conta criada em</string>
+    <string name="dashboard_sign_out">Sair da conta</string>
+    <string name="sign_out_dialog_title">Sair da conta?</string>
+    <string name="sign_out_dialog_text">Para voltar, você vai precisar entrar de novo com seu e-mail e senha.</string>
+    <string name="sign_out_dialog_confirm">Sair</string>
+    <string name="sign_out_dialog_cancel">Cancelar</string>
 </resources>

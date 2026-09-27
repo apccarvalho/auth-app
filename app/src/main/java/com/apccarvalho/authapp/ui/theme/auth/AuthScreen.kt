@@ -1,4 +1,4 @@
-package com.apccarvalho.authapp.ui.auth
+package com.apccarvalho.authapp.ui.theme.auth
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
@@ -19,15 +19,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -41,7 +38,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.autofill.ContentType
 import androidx.compose.ui.focus.FocusDirection
 import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
@@ -57,7 +53,14 @@ import com.apccarvalho.authapp.R
 import com.apccarvalho.authapp.domain.AuthError
 import com.apccarvalho.authapp.domain.AuthUser
 import com.apccarvalho.authapp.domain.FieldError
+import com.apccarvalho.authapp.ui.auth.AuthAction
+import com.apccarvalho.authapp.ui.auth.AuthEvent
+import com.apccarvalho.authapp.ui.auth.AuthField
+import com.apccarvalho.authapp.ui.auth.AuthMode
+import com.apccarvalho.authapp.ui.auth.AuthUiState
+import com.apccarvalho.authapp.ui.auth.AuthViewModel
 import com.apccarvalho.authapp.ui.components.AppTextField
+import com.apccarvalho.authapp.ui.components.BrandMark
 import com.apccarvalho.authapp.ui.components.ErrorBanner
 import com.apccarvalho.authapp.ui.components.ModeToggle
 import com.apccarvalho.authapp.ui.components.PasswordField
@@ -271,31 +274,6 @@ fun AuthContent(
                 }
             }
         }
-    }
-}
-
-@Composable
-private fun BrandMark() {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Box(
-            contentAlignment = Alignment.Center,
-            modifier = Modifier
-                .size(40.dp)
-                .background(MaterialTheme.colorScheme.primaryContainer, MaterialTheme.shapes.medium),
-        ) {
-            Icon(
-                painter = painterResource(R.drawable.ic_lock),
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onPrimaryContainer,
-                modifier = Modifier.size(22.dp),
-            )
-        }
-        Spacer(Modifier.width(Spacing.sm))
-        Text(
-            text = stringResource(R.string.app_name),
-            style = MaterialTheme.typography.titleLarge,
-            color = MaterialTheme.colorScheme.onBackground,
-        )
     }
 }
 
