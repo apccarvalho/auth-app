@@ -3,7 +3,7 @@ package com.apccarvalho.authapp.ui.theme
 import androidx.compose.ui.graphics.Color
 
 // ---------------------------------------------------------------------------
-// Paleta base — do mais claro ao mais intenso
+// Paleta base (definida na atividade) — do mais claro ao mais intenso
 // ---------------------------------------------------------------------------
 val Mint50 = Color(0xFFEBFBF4)   // fundo das telas
 val Mint100 = Color(0xFFD5F7E9)  // cartões, superfícies elevadas
@@ -13,6 +13,9 @@ val Mint400 = Color(0xFF56DDA7)  // cor de marca: botão principal
 
 // ---------------------------------------------------------------------------
 // Tons de apoio (fora da paleta, derivados do mesmo matiz verde)
+// Necessários porque texto branco sobre #56DDA7 tem contraste 1,7:1 e o
+// próprio #56DDA7 sobre o fundo tem 1,6:1 — ilegível para textos e bordas.
+// Contrastes medidos sobre Mint50 (WCAG AA pede 4,5:1 para texto, 3:1 para bordas).
 // ---------------------------------------------------------------------------
 val Ink900 = Color(0xFF0E3326)   // texto principal — 12,9:1 no fundo, 8,1:1 no Mint400
 val Ink700 = Color(0xFF2F5A4A)   // texto de apoio — 7,3:1
@@ -32,5 +35,5 @@ val OnErrorContainer = Color(0xFF410E0B)
 // ---------------------------------------------------------------------------
 val StrengthWeak = ErrorRed
 val StrengthFair = Color(0xFFE0A526)
-val StrengthGood = Mint300
+val StrengthGood = Mint400  // Mint300 quase some sobre o trilho Mint200
 val StrengthStrong = MintDeep

@@ -3,6 +3,7 @@ package com.apccarvalho.authapp.ui.auth
 import com.apccarvalho.authapp.domain.AuthError
 import com.apccarvalho.authapp.domain.AuthUser
 import com.apccarvalho.authapp.domain.FieldError
+import com.apccarvalho.authapp.domain.PasswordStrength
 
 enum class AuthMode { LOGIN, REGISTER }
 
@@ -25,6 +26,9 @@ data class AuthUiState(
     val formError: AuthError? = null,
 ) {
     val isRegister: Boolean get() = mode == AuthMode.REGISTER
+
+    /** Recalculada a cada tecla; usada pelo medidor no cadastro. */
+    val passwordStrength: PasswordStrength get() = PasswordStrength.evaluate(password)
 
     val hasFieldErrors: Boolean
         get() = listOf(nameError, emailError, passwordError, confirmPasswordError)

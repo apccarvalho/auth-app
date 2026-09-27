@@ -32,6 +32,9 @@
     <string name="criterion_uppercase">Uma letra maiúscula</string>
     <string name="criterion_digit">Um número</string>
     <string name="criterion_special">Um símbolo (!@#$…)</string>
+    <string name="criterion_met">atendido</string>
+    <string name="criterion_not_met">pendente</string>
+    <string name="strength_a11y">Força da senha: %1$s</string>
     <!-- Tela de autenticação -->
     <string name="auth_title_login">Que bom te ver de novo</string>
     <string name="auth_subtitle_login">Entre com seu e-mail e senha.</string>
@@ -62,4 +65,14 @@
     <string name="sign_out_dialog_text">Para voltar, você vai precisar entrar de novo com seu e-mail e senha.</string>
     <string name="sign_out_dialog_confirm">Sair</string>
     <string name="sign_out_dialog_cancel">Cancelar</string>
+
+    <!-- Recuperação de senha -->
+    <string name="forgot_title">Recuperar senha</string>
+    <string name="forgot_subtitle">Informe o e-mail da sua conta. Vamos enviar um link para você criar uma nova senha.</string>
+    <string name="forgot_send">Enviar link</string>
+    <string name="forgot_resend">Reenviar link</string>
+    <string name="forgot_resend_in">Reenviar em %1$d s</string>
+    <string name="forgot_sent_notice">Se existir uma conta com %1$s, o link chega em alguns minutos. Confira também a caixa de spam.</string>
+    <string name="forgot_back_to_login">Voltar para o login</string>
+    <string name="cd_back">Voltar</string>
 </resources>

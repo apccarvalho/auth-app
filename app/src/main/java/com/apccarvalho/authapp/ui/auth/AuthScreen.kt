@@ -1,4 +1,4 @@
-package com.apccarvalho.authapp.ui.theme.auth
+package com.apccarvalho.authapp.ui.auth
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
@@ -53,17 +53,13 @@ import com.apccarvalho.authapp.R
 import com.apccarvalho.authapp.domain.AuthError
 import com.apccarvalho.authapp.domain.AuthUser
 import com.apccarvalho.authapp.domain.FieldError
-import com.apccarvalho.authapp.ui.auth.AuthAction
-import com.apccarvalho.authapp.ui.auth.AuthEvent
-import com.apccarvalho.authapp.ui.auth.AuthField
-import com.apccarvalho.authapp.ui.auth.AuthMode
-import com.apccarvalho.authapp.ui.auth.AuthUiState
 import com.apccarvalho.authapp.ui.auth.AuthViewModel
 import com.apccarvalho.authapp.ui.components.AppTextField
 import com.apccarvalho.authapp.ui.components.BrandMark
 import com.apccarvalho.authapp.ui.components.ErrorBanner
 import com.apccarvalho.authapp.ui.components.ModeToggle
 import com.apccarvalho.authapp.ui.components.PasswordField
+import com.apccarvalho.authapp.ui.components.PasswordStrengthMeter
 import com.apccarvalho.authapp.ui.components.PrimaryButton
 import com.apccarvalho.authapp.ui.theme.AuthAppTheme
 import com.apccarvalho.authapp.ui.theme.Sizes
@@ -218,6 +214,18 @@ fun AuthContent(
                             isNewPassword = state.isRegister,
                             onFocusLost = { onAction(AuthAction.FieldBlurred(AuthField.PASSWORD)) },
                         )
+
+                        // Medidor de força — só no cadastro, depois que algo foi digitado
+                        AnimatedVisibility(
+                            visible = state.isRegister && state.password.isNotEmpty(),
+                            enter = fadeIn() + expandVertically(),
+                            exit = fadeOut() + shrinkVertically(),
+                        ) {
+                            PasswordStrengthMeter(
+                                strength = state.passwordStrength,
+                                modifier = Modifier.padding(top = Spacing.xs, bottom = Spacing.xs),
+                            )
+                        }
 
                         // Confirmação — só no cadastro
                         AnimatedVisibility(

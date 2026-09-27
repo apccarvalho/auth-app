@@ -12,3 +12,7 @@ data object AuthRoute
 
 @Serializable
 data object DashboardRoute
+
+/** Recebe o e-mail já digitado no login, para pré-preencher o campo. */
+@Serializable
+data class ForgotPasswordRoute(val email: String = "")
