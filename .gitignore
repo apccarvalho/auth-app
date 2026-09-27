@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Configuração do Firebase
+app/google-services.json
+
+# Chaves de assinatura
+*.jks
+*.keystore
